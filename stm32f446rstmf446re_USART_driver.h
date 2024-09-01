@@ -320,5 +320,28 @@ void USART_Init(USART_Handle_t *pUSARTHandle)
 
 }
 
+void USART_DeInit(USART_RegDef_t *pUSARTx) {
+    if (pUSARTx == USART1) {
+
+        USART1_PCLK_DI();    // Disable the USART1 peripheral clock
+    } else if (pUSARTx == USART2) {
+ 
+        USART2_PCLK_DI();    // Disable the USART2 peripheral clock
+    } else if (pUSARTx == USART3) {
+
+        USART3_PCLK_DI();    // Disable the USART3 peripheral clock
+    } else if (pUSARTx == UART4) {
+
+        UART4_PCLK_DI();     // Disable the UART4 peripheral clock
+    } else if (pUSARTx == UART5) {
+
+        UART5_PCLK_DI();     // Disable the UART5 peripheral clock
+    } else if (pUSARTx == USART6) {
+
+        USART6_PCLK_DI();    // Disable the USART6 peripheral clock
+    }
+
+}
+
 
 #endif /* INC_USART_DRIVER_H_ */
