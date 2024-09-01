@@ -89,6 +89,15 @@
 #define GPIOH_PCLK_DI()  (RCC->AHB1ENR &= ~(1 << 7))
 #define GPIOI_PCLK_DI()  (RCC->AHB1ENR &= ~(1 << 8))
 
+
+#define USART1_PCLK_DI   (RCC->ABP2ENR&=~(1<<4))
+#define USART2_PCLK_DI  (RCC->APB1ENR&=~(1<<17))
+#define USART3_PCLK_DI  (RCC->APB1ENR&=~(1<<18))
+#define USART4_PCLK_DI  (RCC->APB1ENR&=~(1<<19))
+#define USART5_PCLK_DI  (RCC->APB1ENR&=~(1<<20))
+#define USART6_PCLK_DI  (RCC->APB2ENR&=~(1<<5))
+
+
 #define I2C1_PCLK_EN()   (RCC->APB1ENR |= (1 << 21))
 #define I2C2_PCLK_EN()   (RCC->APB1ENR |= (1 << 22))
 #define I2C3_PCLK_EN()   (RCC->APB1ENR |= (1 << 23))
